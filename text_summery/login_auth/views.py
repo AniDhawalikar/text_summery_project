@@ -34,7 +34,7 @@ class RegisterUserView(APIView):
             
             user = App_User.objects.filter(email=email, is_active = True)
             if user:
-                return ErrorResponse(code="TPE102", status_="ERROR", msg=f"User already present : {str(e)}", payload={})
+                return ErrorResponse(code="TPE102", status_="ERROR", msg=f"User already present", payload={})
 
             user_created = App_User.objects.create(email=email, user_name=username, mobile=mobile, password=password)
             if user_created:
