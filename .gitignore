@@ -1,0 +1,10 @@
+*.log
+.idea
+text_summery/static
+.jpeg
+*media*
+*.py[cod]
+envi
+.pyc
+.DS_Store
+text_summery/db.sqlite3
