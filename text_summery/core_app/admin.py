@@ -1,3 +1,8 @@
 from django.contrib import admin
+from django.contrib import admin
+from .models import App_User, Authorization
 
-# Register your models here.
+admin.site.register(App_User)
+admin.site.register(Authorization)
+
+

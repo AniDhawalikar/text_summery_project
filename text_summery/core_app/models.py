@@ -16,6 +16,10 @@ class App_User(BaseField):
     user_name = models.CharField(max_length=255)
     mobile = models.CharField(max_length=15)
     password = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.email
+
 
 
 def _default_expiry():
@@ -29,4 +33,7 @@ class Authorization(BaseField):
     user = models.EmailField()
     token = models.CharField(max_length=550, null=True, blank=True)
     expiry_time = models.DateTimeField(default = _default_expiry)
+
+    def __str__(self):
+        return self.user
 
